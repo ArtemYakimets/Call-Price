@@ -3,17 +3,17 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define ARRAY_SIZE 1000000000
+#define ARRAY_SIZE 500000000
 
-double discriminant(double a, double b, double c) {
+static inline double discriminant(double a, double b, double c) {
     return b * b - 4 * a * c;
 }
 
-double root1(double a, double b, double d) {
+static inline double root1(double a, double b, double d) {
     return (-b + sqrt(d)) / (2 * a);
 }
 
-double root2(double a, double b, double d) {
+static inline double root2(double a, double b, double d) {
     return (-b - sqrt(d)) / (2 * a);
 }
 
@@ -31,6 +31,8 @@ int main() {
         b[i] = rand();
         c[i] = rand();
     }
+
+    printf("Start timing!\n");
 
     start = clock();
 
