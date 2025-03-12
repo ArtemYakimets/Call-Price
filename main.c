@@ -49,7 +49,5 @@ int main() {
 
 /*
 Compilation 
-gcc -c solver.c -o solver.o
-gcc -c main.c -o main.o
-gcc main.o solver.o -o program
+gcc main.c solver.c -o program
 */
