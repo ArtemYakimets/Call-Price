@@ -2,20 +2,10 @@
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
+#include "solver.h"
 
 #define ARRAY_SIZE 500000000
 
-double discriminant(double a, double b, double c) {
-    return b * b - 4 * a * c;
-}
-
-double root1(double a, double b, double d) {
-    return (-b + sqrt(d)) / (2 * a);
-}
-
-double root2(double a, double b, double d) {
-    return (-b - sqrt(d)) / (2 * a);
-}
 
 int main() {
     clock_t start, end;
